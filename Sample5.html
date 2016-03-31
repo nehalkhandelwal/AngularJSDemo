@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<body>
+
+<div ng-app="" ng-init="person={firstName:'John',lastName:'Doe'};quantity=100;cost=5;firstName='Nehal';lastName='Khandelwal';points=[1,15,19,2,40]">
+    <p>Total in dollar: {{ quantity * cost }}</p>
+    <p>Name is : <span ng-bind="person.firstName +' '+ lastName"></span> </p>
+    <p>Array is using brackets : {{points[2]}}</p>
+    <p>Array is using ng-bind : <span data-ng-bind="points[2]"></span> </p>
+</div>
+
+</body>
+</html>

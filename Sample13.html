@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<body>
+
+<div ng-app="myApp" ng-controller="myCnrl">
+
+    <h1 ng-click="myFunction()">Mouse over me!!!!</h1>
+    <h2>{{count}}</h2>
+    <h1 ng-mousemove="myFunc($event)">Mouse Over Me!</h1>
+    <p>Coordinates: {{x + ', ' + y}}</p>
+
+</div>
+<script>
+    angular.module('myApp',[]).controller('myCnrl',function($scope){
+        $scope.count=0;
+        $scope.myFunction = function(){
+            $scope.count++;
+        }
+        $scope.myFunc = function(event){
+            $scope.x=event.clientX;
+            $scope.y=event.clientY;
+        }
+    });
+</script>
+</body>
+</html>

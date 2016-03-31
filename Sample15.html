@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<body>
+
+<div ng-app="">
+    <form>
+        Pic a topic :
+        <input type="radio" ng-model="myVar" value="dogs">Dogs
+        <input type="radio" ng-model="myVar" value="cats">Cats
+        <input type="radio" ng-model="myVar" value="tuts">Tutorials
+    </form>
+
+    <div ng-switch="myVar">
+        <div ng-switch-when="dogs">
+            <h1>Dogs</h1>
+            <p>Welcome to a world of dogs.</p>
+        </div>
+        <div ng-switch-when="tuts">
+            <h1>Tutorials</h1>
+            <p>Learn from examples.</p>
+        </div>
+        <div ng-switch-when="cats">
+            <h1>Cats</h1>
+            <p>Read about cats.</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

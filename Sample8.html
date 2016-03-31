@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<style>
+    input.ng-invalid {
+    background-color: lightblue;
+}
+</style>
+<body>
+<form data-ng-app="" name="myForm" data-ng-init="myText = 'post@myweb.com'">
+    <!--Email :-->
+        <!--<input type="email" name="myAddress" ng-model="myText" required>-->
+        <!--<h1>Status</h1>-->
+        <!--{{myForm.myAddress.$valid}}-->
+        <!--{{myForm.myAddress.$dirty}}-->
+        <!--{{myForm.myAddress.$touched}}-->
+        <!--<span ng-show="myForm.myAddress.$error.email">Not a valid email address</span>-->
+
+    Enter your name:
+    <input name="myAddress" ng-model="text" required>
+</form>
+
+</body>
+</html>
